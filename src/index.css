@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.search-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width:50%;
+  gap: 20px; /* Adjust the spacing between input fields */
+}
+.s{
+  display: flex;
+  justify-content:end;
+  margin-left:0px;
+}
