@@ -78,39 +78,30 @@ review:{
 const Brewery = mongoose.model("moengage", brewerySchema);
 const brew=new Brewery(
   {
-    "id": "34e8c68b-6146-453f-a4b9-1f6cd99a5ada",
-    "name": "1 of Us Brewing Company",
-    "brewery_type": "micro",
-    "address_1": "8100 Washington Ave",
+    "id": "b54b16e1-ac3b-4bff-a11f-f7ae9ddc27e0",
+    "name": "MadTree Brewing 2.0",
+    "brewery_type": "regional",
+    "address_1": "5164 Kennedy Ave",
     "address_2": null,
     "address_3": null,
-    "city": "Mount Pleasant",
-    "state_province": "Wisconsin",
-    "postal_code": "53406-3920",
+    "city": "Cincinnati",
+    "state_province": "Ohio",
+    "postal_code": "45213",
     "country": "United States",
-    "longitude": "-87.88336350209435",
-    "latitude": "42.72010826899558",
-    "phone": "2624847553",
-    "website_url": "https://www.1ofusbrewing.com",
-    "state": "Wisconsin",
-    "street": "8100 Washington Ave"
+    "longitude": "-84.4137736",
+    "latitude": "39.1885752",
+    "phone": "5138368733",
+    "website_url": "http://www.madtreebrewing.com",
+    "state": "Ohio",
+    "street": "5164 Kennedy Ave"
 }
 );
-// brew.save()
-// .then(results => {
-//   console.log('Breweries in Ohio:', results);
-// })
-// .catch(err => {
-//   console.error('Error:', err);
-// });
-//  Brewery.findOneAndDelete({ state: 'Ohio' })
 
-
-// Brewery.find({ state: 'Texas' })
-// .then(results => {
-//   console.log('Breweries in Ohio:', results);
-// })
-// .catch(err => {
-//   console.error('Error:', err);
-// });
+ Brewery.find({ })
+.then(results => {
+  console.log('Breweries in Ohio:', results);
+})
+.catch(err => {
+  console.error('Error:', err);
+});
 module.exports=Brewery;
