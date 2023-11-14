@@ -1,7 +1,4 @@
-
-
-
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from 'react';
 
 const SearchContext = createContext();
 
@@ -12,17 +9,22 @@ export const SearchProvider = ({ children }) => {
 
   const searchReducer = (state, action) => {
     switch (action.type) {
-      case "SET_SEARCH_RESULTS":
+      case 'SET_SEARCH_RESULTS':
         return {
           ...state,
           searchResults: action.payload,
         };
-      case "UPDATE_SEARCH_RESULT":
+      case 'UPDATE_SEARCH_RESULT':
         return {
           ...state,
           searchResults: state.searchResults.map((result) =>
             result.id === action.payload.id ? action.payload : result
           ),
+        };
+      case 'CLEAR_SEARCH_RESULTS':
+        return {
+          ...state,
+          searchResults: [],
         };
       default:
         return state;
@@ -41,9 +43,7 @@ export const SearchProvider = ({ children }) => {
 export const useSearchContext = () => {
   const context = useContext(SearchContext);
   if (!context) {
-    throw new Error(
-      "useSearchContext must be used within a SearchProvider"
-    );
+    throw new Error('useSearchContext must be used within a SearchProvider');
   }
   return context;
 };
